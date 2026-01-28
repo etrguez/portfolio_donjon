@@ -697,3 +697,31 @@ body {
     text-align: center;
   }
 }
+
+/* Galerie de screenshots */
+.galerie-screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.screenshot:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .galerie-screenshots {
+    grid-template-columns: 1fr;
+  }
+}
