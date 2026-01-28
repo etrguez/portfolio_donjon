@@ -447,3 +447,253 @@ body {
   }
 }
 
+/* Cartes de projets */
+.projet-card {
+  background: rgba(26, 61, 93, 0.7);
+  border: 2px solid #ADD8E6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.projet-card:hover {
+  background: rgba(26, 61, 93, 0.9);
+  border-color: #FFD700;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.projet-card h4 {
+  color: #FFD700;
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.apercu-description {
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.stack-info {
+  color: #ADD8E6;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.actions-projet {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-detail, .btn-site {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #FFD700;
+  background: transparent;
+  color: #FFD700;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-detail:hover {
+  background: #FFD700;
+  color: #1a3d5d;
+}
+
+.btn-site {
+  border-color: #ADD8E6;
+  color: #ADD8E6;
+}
+
+.btn-site:hover {
+  background: #ADD8E6;
+  color: #1a3d5d;
+}
+
+/* Pages détails des projets */
+.projet-detail {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.detail-card {
+  background: rgba(26, 61, 93, 0.85) !important;
+  padding: 2rem !important;
+  border: 2px solid #FFD700 !important;
+}
+
+.detail-card h2 {
+  color: #FFD700;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detail-card h3 {
+  color: #ADD8E6;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(173, 216, 230, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.detail-card h4 {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.detail-card h5 {
+  color: #ADD8E6;
+  font-size: 1.05rem;
+}
+
+.projet-meta {
+  text-align: center;
+  color: #ADD8E6;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.projet-meta p {
+  margin: 0.5rem 0;
+}
+
+.detail-card p {
+  color: #FFFFFF;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.detail-card ul {
+  color: #FFFFFF;
+  line-height: 1.8;
+  margin-left: 1.5rem;
+}
+
+.detail-card li {
+  margin: 0.8rem 0;
+}
+
+.detail-card code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #FFD700;
+}
+
+.galerie-backend {
+  margin: 2rem 0;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #FFD700;
+}
+
+.galerie-backend h4 {
+  color: #FFD700;
+  text-align: center;
+  margin-top: 0;
+}
+
+.backend-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.backend-item {
+  background: rgba(26, 61, 93, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(173, 216, 230, 0.3);
+  transition: all 0.3s ease;
+}
+
+.backend-item:hover {
+  border-color: #FFD700;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
+}
+
+.backend-item h5 {
+  color: #FFD700;
+  margin-top: 0;
+}
+
+.backend-item p {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.backend-item ul {
+  color: #FFFFFF;
+  margin-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.backend-item li {
+  margin: 0.4rem 0;
+}
+
+.projet-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(173, 216, 230, 0.3);
+}
+
+.btn-principal {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #1a3d5d;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-principal:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .detail-card {
+    padding: 1.5rem !important;
+  }
+  
+  .detail-card h2 {
+    font-size: 1.8rem;
+  }
+  
+  .backend-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .actions-projet {
+    flex-direction: column;
+  }
+  
+  .btn-detail, .btn-site, .btn-principal {
+    width: 100%;
+    text-align: center;
+  }
+}

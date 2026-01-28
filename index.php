@@ -75,23 +75,64 @@
   <section id="projets">
   <div class="card">
   <h3>Quêtes</h3>
-  <div class="calculateur">
-    <p>
-      <strong>Nom :</strong> Calculateur de Dépenses ✨<br>
-      <strong>Description :</strong> Web-app full-stack pour suivre son budget : ajoute, édite ou supprime tes dépenses, catégorise-les et suis le total en temps réel.<br>
-      <strong>Stack :</strong> HTML, CSS, PHP, JavaScript, MySQL<br>
-      <a href="http://calculateur0101.caba3973.odns.fr/">Voir le site</a>
+  <div class="projet-card calculateur">
+    <h4>Calculateur de Dépenses ✨</h4>
+    <p class="apercu-description">
+      Web-app full-stack pour suivre son budget : ajoute, édite ou supprime tes dépenses, catégorise-les et suis le total en temps réel.
     </p>
+    <p class="stack-info"><strong>Stack :</strong> HTML, CSS, PHP, JavaScript, MySQL</p>
+    <div class="actions-projet">
+      <a href="projet-calculateur.php" class="btn-detail">📖 Voir les détails</a>
+      <a href="http://calculateur0101.caba3973.odns.fr/" class="btn-site">🌐 Voir le site</a>
+    </div>
   </div>
-  <div class="zoo_arcadia">
-  <p>
-      <strong>Nom :</strong> Zoo Arcadia ✨<br>
-      <strong>Description :</strong>Plateforme interactive pour explorer les habitats du zoo, connaître les animaux qui y vivent et découvrir les services proposés. Les visiteurs peuvent partager leur expérience via des avis, tandis qu’un espace d’administration permet de gérer animaux, enclos, prestations et d’accéder aux rapports vétérinaires.<br>
-      <strong>Stack :</strong> HTML, CSS, PHP, JavaScript, MongoDB et MySQL<br>
-      <a href="http://arcadia0101.caba3973.odns.fr">Voir le site</a>
+  <div class="projet-card zoo_arcadia">
+    <h4>Zoo Arcadia ✨</h4>
+    <p class="apercu-description">
+      Plateforme interactive pour explorer les habitats du zoo, connaître les animaux qui y vivent et découvrir les services proposés. Les visiteurs peuvent partager leur expérience via des avis, tandis qu'un espace d'administration permet de gérer animaux, enclos, prestations et d'accéder aux rapports vétérinaires.
     </p>
+    <p class="stack-info"><strong>Stack :</strong> HTML, CSS, PHP, JavaScript, MongoDB et MySQL</p>
+    <div class="actions-projet">
+      <a href="projet-zoo-arcadia.php" class="btn-detail">📖 Voir les détails</a>
+      <a href="http://arcadia0101.caba3973.odns.fr" class="btn-site">🌐 Voir le site</a>
+    </div>
   </div>
 
+  <div class="projet-card asiria">
+    <h4>Portfolio Asiria Álvarez ✨</h4>
+    <p class="apercu-description">
+      Portfolio professionnel minimaliste pour une photographe et designer graphique à Las Palmas. Showcase de projets créatifs avec galeries multimédia haute qualité, panel administrateur complet et analytics géographiques.
+    </p>
+    <p class="stack-info"><strong>Stack :</strong> PHP 7/8, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript</p>
+    <div class="actions-projet">
+      <a href="projet-asiria.php" class="btn-detail">📖 Voir les détails</a>
+      <a href="https://asiriaalvarez.art" class="btn-site" target="_blank">🌐 Voir le site</a>
+    </div>
+  </div>
+
+  <div class="projet-card tallerperu">
+    <h4>Taller Perú ✨</h4>
+    <p class="apercu-description">
+      Site professionnel pour un atelier automobile au Pérou avec gestion dynamique des promotions. Interface client intuitive et puissant panel administrateur pour gérer les offres en temps réel avec optimisation d'images avancée.
+    </p>
+    <p class="stack-info"><strong>Stack :</strong> PHP, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript</p>
+    <div class="actions-projet">
+      <a href="projet-tallerperu.php" class="btn-detail">📖 Voir les détails</a>
+      <a href="https://tallerperu.com" class="btn-site" target="_blank">🌐 Voir le site</a>
+    </div>
+  </div>
+
+  <div class="projet-card scout">
+    <h4>Scout-Doramas 104 ✨</h4>
+    <p class="apercu-description">
+      Plateforme web complète pour une association de scouts en Espagne. Interface publique engageante pour recruter les jeunes, calendrier d'événements, galerie multimédia et panel admin sécurisé pour gérer inscriptions et messages.
+    </p>
+    <p class="stack-info"><strong>Stack :</strong> PHP, PDO, MySQL, HTML5, CSS3, JavaScript</p>
+    <div class="actions-projet">
+      <a href="projet-scout-doramas.php" class="btn-detail">📖 Voir les détails</a>
+      <a href="https://scout-doramas.kdevs.io/" class="btn-site" target="_blank">🌐 Voir le site</a>
+    </div>
+  </div>
 
 </div>
   </section>
