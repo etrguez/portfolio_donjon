@@ -78,7 +78,7 @@ const grimoireOpen = document.getElementById("grimoireOpen");
 const bookSound = document.getElementById("bookSound");
 
 function isMobile() {
-  return window.matchMedia('(max-width: 768px)').matches;
+  return window.matchMedia('(max-width: 480px)').matches;
 }
 
 grimoire.addEventListener("click", () => {
@@ -93,10 +93,13 @@ grimoire.addEventListener("click", () => {
     } catch (_) {}
   }
 
-  // Laisser 100% le CSS gérer l'affichage sur mobile
+  // Sur desktop/tablette : laisser le CSS gérer (couverture reste visible)
+  // Sur mobile : le CSS masque la couverture via media query
   if (!isMobile()) {
+    // Desktop/Tablette : afficher le contenu en flex, la couverture reste visible en arrière
     grimoireOpen.style.display = grimoire.classList.contains("open") ? "flex" : "none";
   } else {
+    // Mobile : laisser le CSS gérer complètement
     grimoireOpen.style.removeProperty('display');
   }
 });
