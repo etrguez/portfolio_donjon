@@ -72,6 +72,45 @@ body {
     transform: scaleX(1);
   }
   
+  /* Language Selector */
+  .language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(26, 61, 93, 0.95);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .language-selector button {
+    background: transparent;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .language-selector button:hover {
+    background: #FFD700;
+    color: #1a3d5d;
+    transform: scale(1.05);
+  }
+  
+  .language-selector button.active {
+    background: #FFD700;
+    color: #1a3d5d;
+    font-weight: bold;
+  }
 
   /* Grimoire */
   .grimoire-container {

@@ -1,9 +1,10 @@
+<?php include 'i18n.php'; ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo $currentLang; ?>">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio Asiria Álvarez - Portfolio Elisabeth</title>
+  <title><?php echo $currentLang === 'fr' ? 'Portfolio Asiria Álvarez - Portfolio Elisabeth' : ($currentLang === 'es' ? 'Portafolio Asiria Álvarez - Portafolio Elisabeth' : 'Asiria Álvarez Portfolio - Elisabeth Portfolio'); ?></title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css" />
@@ -11,10 +12,17 @@
 <body>
   <canvas id="magicParticles"></canvas>
 
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button data-lang="fr" class="<?php echo $currentLang === 'fr' ? 'active' : ''; ?>">🇫🇷 FR</button>
+    <button data-lang="es" class="<?php echo $currentLang === 'es' ? 'active' : ''; ?>">🇪🇸 ES</button>
+    <button data-lang="en" class="<?php echo $currentLang === 'en' ? 'active' : ''; ?>">🇬🇧 EN</button>
+  </div>
+
   <header>
-    <h1>Elisabeth, Mage Développeuse</h1>
+    <h1><?php echo t('header_title'); ?></h1>
     <nav>
-      <a href="./index.php#projets">← Retour aux quêtes</a>
+      <a href="./index.php#projets"><?php echo t('nav_back_projects'); ?></a>
     </nav>
   </header>
 
@@ -116,7 +124,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 Elisabeth - Portfolio Donjon Développeuse</p>
+    <p><?php echo t('footer_copyright'); ?></p>
   </footer>
 
   <script src="script.js"></script>

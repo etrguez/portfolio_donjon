@@ -1,3 +1,24 @@
+// ===== GESTION DE LA LANGUE =====
+function changeLanguage(lang) {
+  // Stocker la langue dans le cookie
+  document.cookie = `portfolio_lang=${lang}; path=/; max-age=31536000`;
+  
+  // Recharger la page pour appliquer la langue
+  window.location.reload();
+}
+
+// Initialiser les boutons de langue au chargement
+document.addEventListener('DOMContentLoaded', () => {
+  const langButtons = document.querySelectorAll('.language-selector button');
+  
+  langButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const lang = button.getAttribute('data-lang');
+      changeLanguage(lang);
+    });
+  });
+});
+
 // Scroll fluide (seulement pour les ancres internes)
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', (e) => {
