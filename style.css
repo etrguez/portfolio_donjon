@@ -141,7 +141,7 @@ body {
   
   .page {
     width: 50%;
-    padding: 0.6rem;
+    padding: 0.8rem;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.0);
     border: 1px solid #c6b28d;
@@ -225,7 +225,7 @@ body {
 }
   
   .page-left img {
-    max-width: 120px;
+    max-width: 140px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -238,8 +238,8 @@ body {
   
   .page-right h3 {
     font-family: 'MedievalSharp', cursive;
-    font-size: 1.1rem;
-    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    margin: 0 0 0.7rem 0;
     color: #000;
   }
   
@@ -249,11 +249,11 @@ body {
     margin: 0;
     text-align: left;
     color: #000;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
   
   .page-right li {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     line-height: 1.3;
   }
   
