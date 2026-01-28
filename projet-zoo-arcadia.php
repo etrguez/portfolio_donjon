@@ -34,6 +34,44 @@
         pour la gestion du zoo. C'est un projet ambitieux qui m'a permis d'explorer les bases de données NoSQL et SQL en parallèle.
       </p>
 
+      <div class="galerie-screenshots">
+        <h3>📸 Aperçu du projet</h3>
+        <div class="screenshots-grid">
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/site-public.png" alt="Interface publique Zoo Arcadia" />
+            <p>Interface publique visiteurs</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/admin-dashboard.png" alt="Dashboard administrateur" />
+            <p>Dashboard administrateur</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/admin-animaux.png" alt="Gestion des animaux" />
+            <p>Gestion des animaux</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/admin-habitats.png" alt="Gestion des habitats" />
+            <p>Gestion des habitats</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/admin-services-1.png" alt="Gestion des services" />
+            <p>Gestion des services</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/inscription.png" alt="Page d'inscription" />
+            <p>Page d'inscription</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/admin-horaires.png" alt="Modification des horaires" />
+            <p>Horaires d'ouverture</p>
+          </div>
+          <div class="screenshot">
+            <img src="./assets/zoo_arcadia/admin-services-2.png" alt="Services additionnels" />
+            <p>Services additionnels</p>
+          </div>
+        </div>
+      </div>
+
       <h3>Fonctionnalités visiteurs</h3>
       <ul>
         <li>🦁 <strong>Exploration des habitats :</strong> Visualisez les différents habitats du zoo avec descriptions</li>
