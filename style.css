@@ -91,6 +91,7 @@ body {
     transform-style: preserve-3d;
     cursor: pointer;
     max-width: 100%;
+    overflow: hidden;
   }
 
   .cover {
@@ -189,7 +190,7 @@ body {
   
   /* Animation d'ouverture conservée sur tablet */
   .grimoire-open {
-    width: 200%;
+    width: 100%;
   }
   
   .page {
@@ -234,14 +235,9 @@ body {
     bottom: 6px;
   }
   
-  /* Animation d'ouverture sur mobile avec scale réduit */
+  /* Utiliser transform au lieu de width pour ne pas dépasser */
   .grimoire-open {
-    width: 180%;
-    transform-origin: left center;
-  }
-  
-  .grimoire.open .grimoire-open {
-    transform: scale(0.95);
+    width: 100%;
   }
   
   .page {
