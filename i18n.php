@@ -2,6 +2,9 @@
 // Système de traduction i18n pour le portfolio
 // Langues supportées: FR (français), ES (español), EN (english)
 
+// Éviter les redéclarations si le fichier est inclus plusieurs fois
+if (!function_exists('getLanguage')) {
+
 // Déterminer la langue de l'utilisateur
 function getLanguage() {
   // Vérifier d'abord le localStorage (via cookie)
@@ -23,10 +26,9 @@ function getLanguage() {
   return 'en';
 }
 
-$currentLang = getLanguage();
-
-// Dictionnaire complet de traductions
-$translations = [
+// Dictionnaire complet de traductions (initié une seule fois)
+if (!isset($GLOBALS['translations'])) {
+  $GLOBALS['translations'] = [
   'fr' => [
     // Header & Navigation
     'header_title' => 'Elisabeth, Mage Développeuse',
@@ -344,11 +346,14 @@ $translations = [
     'msg_required' => 'Required field',
     'msg_invalid_email' => 'Invalid email',
   ]
-];
+  ];
+}
 
 // Fonction helper pour obtenir une traduction
+if (!function_exists('t')) {
 function t($key) {
-  global $currentLang, $translations;
+  $currentLang = getLanguage();
+  $translations = isset($GLOBALS['translations']) ? $GLOBALS['translations'] : [];
   
   if (isset($translations[$currentLang][$key])) {
     return $translations[$currentLang][$key];
@@ -362,13 +367,20 @@ function t($key) {
   // Fallback sur la clé elle-même
   return $key;
 }
+}
 
 // Fonction pour afficher un texte conditionnellement selon la langue
-function getText($fr, $es, $en) {
-  global $currentLang;
+if (!function_exists('trans')) {
+function trans($fr, $es, $en) {
+  $currentLang = getLanguage();
   if ($currentLang === 'fr') return $fr;
   if ($currentLang === 'es') return $es;
   return $en;
 }
-?>
+}
 
+} // Fin de la vérification function_exists
+
+// Initialiser la langue courante globale
+$currentLang = getLanguage();
+?>

@@ -31,13 +31,13 @@
       <h2>Taller Perú ✨</h2>
       
       <div class="projet-meta">
-        <p><strong><?php echo getText('Stack technique :', 'Stack técnico :', 'Technical Stack:'); ?></strong> PHP, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript</p>
-        <p><strong><?php echo getText('Type :', 'Tipo :', 'Type:'); ?></strong> <?php echo getText('Site e-commerce avec panel administrateur', 'Sitio de comercio electrónico con panel de administrador', 'E-commerce website with admin panel'); ?></p>
+        <p><strong><?php echo trans('Stack technique :', 'Stack técnico :', 'Technical Stack:'); ?></strong> PHP, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript</p>
+        <p><strong><?php echo trans('Type :', 'Tipo :', 'Type:'); ?></strong> <?php echo trans('Site e-commerce avec panel administrateur', 'Sitio de comercio electrónico con panel de administrador', 'E-commerce website with admin panel'); ?></p>
       </div>
 
-      <h3><?php echo getText('Vue d\'ensemble', 'Descripción general', 'Overview'); ?></h3>
+      <h3><?php echo trans('Vue d\'ensemble', 'Descripción general', 'Overview'); ?></h3>
       <p>
-        <?php echo getText('Taller Perú est un site professionnel pour un atelier automobile spécialisé au Pérou. La plateforme combine une interface client intuitive pour consulter les services et promotions avec un puissant panel administrateur pour gérer dynamiquement les offres promotionnelles. Ce projet démontre une gestion complète de contenu avec optimisation d\'images avancée.', 'Taller Perú es un sitio profesional para un taller automóvil especializado en Perú. La plataforma combina una interfaz intuitiva del cliente para consultar servicios y promociones con un poderoso panel de administrador para gestionar dinámicamente las ofertas promocionales. Este proyecto demuestra una gestión completa de contenido con optimización de imágenes avanzada.', 'Taller Perú is a professional website for a specialized automotive workshop in Peru. The platform combines an intuitive client interface to view services and promotions with a powerful admin panel to dynamically manage promotional offers. This project demonstrates complete content management with advanced image optimization.'); ?>
+        <?php echo trans('Taller Perú est un site professionnel pour un atelier automobile spécialisé au Pérou. La plateforme combine une interface client intuitive pour consulter les services et promotions avec un puissant panel administrateur pour gérer dynamiquement les offres promotionnelles. Ce projet démontre une gestion complète de contenu avec optimisation d\'images avancée.', 'Taller Perú es un sitio profesional para un taller automóvil especializado en Perú. La plataforma combina una interfaz intuitiva del cliente para consultar servicios y promociones con un poderoso panel de administrador para gestionar dinámicamente las ofertas promocionales. Este proyecto demuestra una gestión completa de contenido con optimización de imágenes avanzada.', 'Taller Perú is a professional website for a specialized automotive workshop in Peru. The platform combines an intuitive client interface to view services and promotions with a powerful admin panel to dynamically manage promotional offers. This project demonstrates complete content management with advanced image optimization.'); ?>
       </p>
 
       <div class="galerie-screenshots">
@@ -46,24 +46,24 @@
         <img src="assets/taller_peru/formulaire-ajout-3.png" alt="Interface d'ajout - Partie 3" class="screenshot">
       </div>
 
-      <h3><?php echo getText('Espace Client (Public)', 'Espacio del Cliente (Público)', 'Client Space (Public)'); ?></h3>
+      <h3><?php echo trans('Espace Client (Public)', 'Espacio del Cliente (Público)', 'Client Space (Public)'); ?></h3>
       
-      <h4>📱 <?php echo getText('Fonctionnalités principales', 'Características principales', 'Main Features'); ?></h4>
+      <h4>📱 <?php echo trans('Fonctionnalités principales', 'Características principales', 'Main Features'); ?></h4>
       <ul>
-        <li>🏠 <strong><?php echo getText('Accueil :', 'Inicio :', 'Home:'); ?></strong> <?php echo getText('Services et promotions dynamiques en temps réel', 'Servicios y promociones dinámicas en tiempo real', 'Services and promotions dynamic in real-time'); ?></li>
-        <li>⭐ <strong><?php echo getText('Avis clients :', 'Opiniones de clientes :', 'Customer Reviews:'); ?></strong> <?php echo getText('Testimonios con évaluations', 'Testimonios con evaluaciones', 'Testimonials with ratings'); ?></li>
-        <li>ℹ️ <strong><?php echo getText('À propos & Localisation :', 'Acerca de y Ubicación :', 'About & Location:'); ?></strong> <?php echo getText('Historique et carte du taller', 'Historial y mapa del taller', 'History and workshop map'); ?></li>
-        <li>📋 <strong><?php echo getText('Contact :', 'Contacto :', 'Contact:'); ?></strong> <?php echo getText('Formulaire pour demandes de devis', 'Formulario para solicitudes de presupuesto', 'Form for quote requests'); ?></li>
-        <li>📱 <strong><?php echo getText('Design responsive :', 'Diseño responsivo :', 'Responsive Design:'); ?></strong> <?php echo getText('Mobile-first sur tous appareils', 'Mobile-first en todos los dispositivos', 'Mobile-first on all devices'); ?></li>
+        <li>🏠 <strong><?php echo trans('Accueil :', 'Inicio :', 'Home:'); ?></strong> <?php echo trans('Services et promotions dynamiques en temps réel', 'Servicios y promociones dinámicas en tiempo real', 'Services and promotions dynamic in real-time'); ?></li>
+        <li>⭐ <strong><?php echo trans('Avis clients :', 'Opiniones de clientes :', 'Customer Reviews:'); ?></strong> <?php echo trans('Testimonios con évaluations', 'Testimonios con evaluaciones', 'Testimonials with ratings'); ?></li>
+        <li>ℹ️ <strong><?php echo trans('À propos & Localisation :', 'Acerca de y Ubicación :', 'About & Location:'); ?></strong> <?php echo trans('Historique et carte du taller', 'Historial y mapa del taller', 'History and workshop map'); ?></li>
+        <li>📋 <strong><?php echo trans('Contact :', 'Contacto :', 'Contact:'); ?></strong> <?php echo trans('Formulaire pour demandes de devis', 'Formulario para solicitudes de presupuesto', 'Form for quote requests'); ?></li>
+        <li>📱 <strong><?php echo trans('Design responsive :', 'Diseño responsivo :', 'Responsive Design:'); ?></strong> <?php echo trans('Mobile-first sur tous appareils', 'Mobile-first en todos los dispositivos', 'Mobile-first on all devices'); ?></li>
       </ul>
 
-      <h3><?php echo getText('Espace Administrateur', 'Espacio del Administrador', 'Admin Space'); ?></h3>
+      <h3><?php echo trans('Espace Administrateur', 'Espacio del Administrador', 'Admin Space'); ?></h3>
       
-      <h4>🔐 <?php echo getText('Authentification & Dashboard', 'Autenticación y Panel', 'Authentication & Dashboard'); ?></h4>
-      <p><?php echo getText('Login sécurisé (email/mot de passe, hash bcrypt) avec dashboard temps réel affichant : ✅ Total promotions | 🔥 Actives | 📅 À venir | 🗑️ Expirées', 'Login seguro (email/contraseña, hash bcrypt) con panel en tiempo real mostrando: ✅ Total de promociones | 🔥 Activas | 📅 Próximas | 🗑️ Caducadas', 'Secure login (email/password, bcrypt hash) with real-time dashboard showing: ✅ Total promotions | 🔥 Active | 📅 Upcoming | 🗑️ Expired'); ?></p>
+      <h4>🔐 <?php echo trans('Authentification & Dashboard', 'Autenticación y Panel', 'Authentication & Dashboard'); ?></h4>
+      <p><?php echo trans('Login sécurisé (email/mot de passe, hash bcrypt) avec dashboard temps réel affichant : ✅ Total promotions | 🔥 Actives | 📅 À venir | 🗑️ Expirées', 'Login seguro (email/contraseña, hash bcrypt) con panel en tiempo real mostrando: ✅ Total de promociones | 🔥 Activas | 📅 Próximas | 🗑️ Caducadas', 'Secure login (email/password, bcrypt hash) with real-time dashboard showing: ✅ Total promotions | 🔥 Active | 📅 Upcoming | 🗑️ Expired'); ?></p>
 
-      <h4>🎁 <?php echo getText('Gestion Promotions', 'Gestión de Promociones', 'Promotions Management'); ?></h4>
-      <p><?php echo getText('Créer, éditer, supprimer les offres. Interface intuitive avec :', 'Crear, editar, eliminar ofertas. Interfaz intuitiva con :', 'Create, edit, delete offers. Intuitive interface with:'); ?></p>
+      <h4>🎁 <?php echo trans('Gestion Promotions', 'Gestión de Promociones', 'Promotions Management'); ?></h4>
+      <p><?php echo trans('Créer, éditer, supprimer les offres. Interface intuitive avec :', 'Crear, editar, eliminar ofertas. Interfaz intuitiva con :', 'Create, edit, delete offers. Intuitive interface with:'); ?></p>
 
       <div class="galerie-backend">
         <h4>Détails Gestion Promotions</h4>
@@ -134,22 +134,22 @@
           </div>
 
           <div class="backend-item">
-            <h5>📧 <?php echo getText('Traitement Formulaires', 'Procesamiento de Formularios', 'Forms Processing'); ?></h5>
+            <h5>📧 <?php echo trans('Traitement Formulaires', 'Procesamiento de Formularios', 'Forms Processing'); ?></h5>
             <p>
-              <strong><?php echo getText('Validation JavaScript', 'Validación JavaScript', 'JavaScript Validation'); ?></strong> <?php echo getText('côté client pour UX immédiate.', 'en el lado del cliente para UX inmediata.', 'on the client side for immediate UX.'); ?> 
-              <strong><?php echo getText('Traitement serveur', 'Procesamiento del servidor', 'Server Processing'); ?></strong> <?php echo getText('avec <code>process_contact.php</code>.', 'con <code>process_contact.php</code>.', 'with <code>process_contact.php</code>.'); ?> 
-              <strong><?php echo getText('HTML escaping', 'HTML escaping', 'HTML escaping'); ?></strong> <?php echo getText('des inputs pour sécurité.', 'de entradas para seguridad.', 'of inputs for security.'); ?>
+              <strong><?php echo trans('Validation JavaScript', 'Validación JavaScript', 'JavaScript Validation'); ?></strong> <?php echo trans('côté client pour UX immédiate.', 'en el lado del cliente para UX inmediata.', 'on the client side for immediate UX.'); ?> 
+              <strong><?php echo trans('Traitement serveur', 'Procesamiento del servidor', 'Server Processing'); ?></strong> <?php echo trans('avec <code>process_contact.php</code>.', 'con <code>process_contact.php</code>.', 'with <code>process_contact.php</code>.'); ?> 
+              <strong><?php echo trans('HTML escaping', 'HTML escaping', 'HTML escaping'); ?></strong> <?php echo trans('des inputs pour sécurité.', 'de entradas para seguridad.', 'of inputs for security.'); ?>
             </p>
           </div>
         </div>
       </div>
 
-      <h3><?php echo getText('Points clés & Défis', 'Puntos clave y Desafíos', 'Key Points & Challenges'); ?></h3>
+      <h3><?php echo trans('Points clés & Défis', 'Puntos clave y Desafíos', 'Key Points & Challenges'); ?></h3>
       <ul>
-        <li><strong><?php echo getText('Gestion dates :', 'Gestión de fechas :', 'Date management:'); ?></strong> <?php echo getText('Système promotions actives/à venir/expirées sans cron', 'Sistema de promociones activas/próximas/caducadas sin cron', 'Active/upcoming/expired promotions system without cron'); ?></li>
-        <li><strong><?php echo getText('Optimisation images :', 'Optimización de imágenes :', 'Image optimization:'); ?></strong> <?php echo getText('Compression 2 résolutions pour performance mobiles', 'Compresión de 2 resoluciones para rendimiento móvil', '2-resolution compression for mobile performance'); ?></li>
-        <li><strong><?php echo getText('UX admin :', 'UX del admin :', 'Admin UX:'); ?></strong> <?php echo getText('Interface simple pour gérant non-technique', 'Interfaz simple para administrador no técnico', 'Simple interface for non-technical manager'); ?></li>
-        <li><strong><?php echo getText('Sécurité :', 'Seguridad :', 'Security:'); ?></strong> <?php echo getText('Hash bcrypt, PDO préparées, rate limiting', 'Hash bcrypt, PDO preparadas, rate limiting', 'Bcrypt hash, prepared PDO, rate limiting'); ?></li>
+        <li><strong><?php echo trans('Gestion dates :', 'Gestión de fechas :', 'Date management:'); ?></strong> <?php echo trans('Système promotions actives/à venir/expirées sans cron', 'Sistema de promociones activas/próximas/caducadas sin cron', 'Active/upcoming/expired promotions system without cron'); ?></li>
+        <li><strong><?php echo trans('Optimisation images :', 'Optimización de imágenes :', 'Image optimization:'); ?></strong> <?php echo trans('Compression 2 résolutions pour performance mobiles', 'Compresión de 2 resoluciones para rendimiento móvil', '2-resolution compression for mobile performance'); ?></li>
+        <li><strong><?php echo trans('UX admin :', 'UX del admin :', 'Admin UX:'); ?></strong> <?php echo trans('Interface simple pour gérant non-technique', 'Interfaz simple para administrador no técnico', 'Simple interface for non-technical manager'); ?></li>
+        <li><strong><?php echo trans('Sécurité :', 'Seguridad :', 'Security:'); ?></strong> <?php echo trans('Hash bcrypt, PDO préparées, rate limiting', 'Hash bcrypt, PDO preparadas, rate limiting', 'Bcrypt hash, prepared PDO, rate limiting'); ?></li>
       </ul>
 
       <div class="projet-cta">

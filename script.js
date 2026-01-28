@@ -2,33 +2,33 @@
 function changeLanguage(lang) {
   // Stocker la langue dans le cookie
   document.cookie = `portfolio_lang=${lang}; path=/; max-age=31536000`;
-  
+
   // Recharger la page pour appliquer la langue
   window.location.reload();
 }
 
 // Initialiser les boutons de langue au chargement
-document.addEventListener('DOMContentLoaded', () => {
-  const langButtons = document.querySelectorAll('.language-selector button');
-  
-  langButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const lang = button.getAttribute('data-lang');
+document.addEventListener("DOMContentLoaded", () => {
+  const langButtons = document.querySelectorAll(".language-selector button");
+
+  langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const lang = button.getAttribute("data-lang");
       changeLanguage(lang);
     });
   });
 });
 
 // Scroll fluide (seulement pour les ancres internes)
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
     // Si c'est une ancre interne (#), on fait le scroll fluide
-    if (href && href.startsWith('#')) {
+    if (href && href.startsWith("#")) {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        target.scrollIntoView({ behavior: "smooth" });
       }
     }
     // Sinon, on laisse le navigateur gérer la navigation normale
@@ -36,21 +36,26 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 // Observer pour faire apparaître les .card au scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.1 },
+);
 
-document.querySelectorAll('.card').forEach(el => observer.observe(el));
+document.querySelectorAll(".card").forEach((el) => observer.observe(el));
 
 // Particules magiques
 const canvas = document.getElementById("magicParticles");
 const ctx = canvas.getContext("2d");
 
-let width, height, particles = [];
+let width,
+  height,
+  particles = [];
 
 function resizeCanvas() {
   width = canvas.width = window.innerWidth;
@@ -61,7 +66,7 @@ resizeCanvas();
 
 function createParticles() {
   particles = [];
-  const count = Math.floor(width * height / 9000);
+  const count = Math.floor((width * height) / 9000);
   for (let i = 0; i < count; i++) {
     particles.push({
       x: Math.random() * width,
@@ -69,7 +74,7 @@ function createParticles() {
       size: Math.random() * 2 + 1,
       speedX: (Math.random() - 0.5) * 0.5,
       speedY: (Math.random() - 0.5) * 0.5,
-      opacity: Math.random() * 0.5 + 0.2
+      opacity: Math.random() * 0.5 + 0.2,
     });
   }
 }
@@ -77,7 +82,7 @@ createParticles();
 
 function animateParticles() {
   ctx.clearRect(0, 0, width, height);
-  particles.forEach(p => {
+  particles.forEach((p) => {
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
@@ -99,7 +104,7 @@ const grimoireOpen = document.getElementById("grimoireOpen");
 const bookSound = document.getElementById("bookSound");
 
 function isMobile() {
-  return window.matchMedia('(max-width: 480px)').matches;
+  return window.matchMedia("(max-width: 480px)").matches;
 }
 
 grimoire.addEventListener("click", () => {
@@ -118,19 +123,22 @@ grimoire.addEventListener("click", () => {
   // Sur mobile : le CSS masque la couverture via media query
   if (!isMobile()) {
     // Desktop/Tablette : afficher le contenu en flex, la couverture reste visible en arrière
-    grimoireOpen.style.display = grimoire.classList.contains("open") ? "flex" : "none";
+    grimoireOpen.style.display = grimoire.classList.contains("open")
+      ? "flex"
+      : "none";
   } else {
     // Mobile : laisser le CSS gérer complètement
-    grimoireOpen.style.removeProperty('display');
+    grimoireOpen.style.removeProperty("display");
   }
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   // Réévaluer l'affichage au redimensionnement
   if (!isMobile()) {
-    grimoireOpen.style.display = grimoire.classList.contains("open") ? "flex" : "none";
+    grimoireOpen.style.display = grimoire.classList.contains("open")
+      ? "flex"
+      : "none";
   } else {
-    grimoireOpen.style.removeProperty('display');
+    grimoireOpen.style.removeProperty("display");
   }
 });
-
