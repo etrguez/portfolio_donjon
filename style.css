@@ -141,17 +141,23 @@ body {
   
   .page {
     width: 50%;
-    padding: 1rem;
+    padding: 0.6rem;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.0);
     border: 1px solid #c6b28d;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-    overflow-y: auto;
     max-height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-left {
+    justify-content: center;
+    align-items: center;
   }
   
   .page-right {
-    padding: 1rem 0.8rem;
+    overflow-y: auto;
   }
 
   /* Animation grimoire */
@@ -219,7 +225,8 @@ body {
 }
   
   .page-left img {
-    max-width: 100%;
+    max-width: 120px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -231,20 +238,23 @@ body {
   
   .page-right h3 {
     font-family: 'MedievalSharp', cursive;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
     color: #000;
   }
   
   .page-right ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     text-align: left;
     color: #000;
+    font-size: 0.85rem;
   }
   
   .page-right li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
   }
   
   /* Animation grimoire */
