@@ -536,7 +536,7 @@ body {
 }
 
 .btn-detail, .btn-site {
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   border: 2px solid #FFD700;
   background: transparent;
   color: #FFD700;
@@ -545,11 +545,13 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .btn-detail:hover {
   background: #FFD700;
   color: #1a3d5d;
+  transform: scale(1.05);
 }
 
 .btn-site {
@@ -560,6 +562,32 @@ body {
 .btn-site:hover {
   background: #ADD8E6;
   color: #1a3d5d;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .actions-projet {
+    gap: 0.6rem;
+  }
+  
+  .btn-detail, .btn-site {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions-projet {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .btn-detail, .btn-site {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* Pages détails des projets */
