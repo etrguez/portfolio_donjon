@@ -1,9 +1,16 @@
-// Scroll fluide
+// Scroll fluide (seulement pour les ancres internes)
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
+    const href = link.getAttribute('href');
+    // Si c'est une ancre interne (#), on fait le scroll fluide
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Sinon, on laisse le navigateur gérer la navigation normale
   });
 });
 

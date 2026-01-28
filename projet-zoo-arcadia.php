@@ -14,7 +14,7 @@
   <header>
     <h1>Elisabeth, Mage Développeuse</h1>
     <nav>
-      <a href="index.php#projets">← Retour aux quêtes</a>
+      <a href="./index.php#projets">← Retour aux quêtes</a>
     </nav>
   </header>
 

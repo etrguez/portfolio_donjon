@@ -14,7 +14,7 @@
   <header>
     <h1>Elisabeth, Mage Développeuse</h1>
     <nav>
-      <a href="index.php#projets">← Retour aux quêtes</a>
+      <a href="./index.php#projets">← Retour aux quêtes</a>
     </nav>
   </header>
 
@@ -26,6 +26,13 @@
         <p><strong>Stack technique :</strong> HTML, CSS, PHP, JavaScript, MySQL</p>
         <p><strong>Durée :</strong> 2 semaines</p>
       </div>
+
+      <h3>Galerie - Screenshots</h3>
+      <div class="galerie-screenshots">
+        <img src="assets/simulateur_depenses/site-public.png" alt="Interface principale du calculateur" class="screenshot">
+        <img src="assets/simulateur_depenses/inscription.png" alt="Page d'inscription" class="screenshot">
+        <img src="assets/simulateur_depenses/dashboard.png" alt="Dashboard calculateur" class="screenshot">
+      </img>
 
       <h3>Vue d'ensemble</h3>
       <p>
