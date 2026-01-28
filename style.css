@@ -81,6 +81,7 @@ body {
     perspective: 1200px;
     z-index: 2;
     position: relative;
+    overflow-x: hidden;
   }
 
   .grimoire {
@@ -154,6 +155,17 @@ body {
   }
 
 /* Media queries pour le grimoire */
+@media (max-width: 1024px) {
+  .grimoire-container {
+    margin: 1.5rem 1rem;
+  }
+  
+  .grimoire { 
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .grimoire-container {
     margin: 1.5rem 0.5rem;
@@ -161,7 +173,7 @@ body {
   
   .grimoire { 
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
     height: auto;
     aspect-ratio: 320 / 400;
   }
@@ -175,53 +187,40 @@ body {
     bottom: 8px;
   }
   
-  .page { width: 100%; }
-  .grimoire-open { flex-direction: column; }
-
-  /* Spécifique mobile : simplifier l'ouverture du grimoire */
-  .cover {
-    position: relative;
-    transform: none !important;
-    transform-origin: center center !important;
+  /* Animation d'ouverture conservée sur tablet */
+  .grimoire-open {
+    width: 200%;
   }
   
-  /* Cacher la couverture une fois ouvert sur mobile */
-  .grimoire.open .cover { display: none; }
-
-  /* Le contenu doit prendre la hauteur du contenu en mobile,
-     fermé par défaut pour éviter l'espace vide */
-  .grimoire-open {
-    position: relative;
-    flex-direction: column;
-    display: none;      /* fermé */
-    opacity: 1;         /* pas d'animation de fondu nécessaire */
-    pointer-events: auto;
-  }
-  .grimoire.open .grimoire-open { display: flex; }
-
-  /* Pages en pile, sans bordures internes lourdes */
   .page {
-    border: none;
-    box-shadow: none;
-    padding: 1rem;
-    background: rgba(255,255,255,0);
+    width: 50%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
   }
-  .page.page-left { border-bottom: 1px solid #c6b28d; }
-  .page-left img { max-width: 100%; height: auto; }
-
-  /* Légères réductions typographiques */
-  .page-right h3 { font-size: 1.25rem; }
-  .page-right li { font-size: 0.95rem; }
+  
+  .page-right h3 { 
+    font-size: 1.2rem;
+  }
+  
+  .page-right li { 
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .page-left img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   .grimoire-container {
     margin: 1rem 0.5rem;
+    perspective: 800px;
   }
   
   .grimoire {
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
     height: auto;
     aspect-ratio: 320 / 400;
   }
@@ -231,24 +230,37 @@ body {
   }
   
   .grimoire-text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     bottom: 6px;
   }
   
+  /* Animation d'ouverture sur mobile avec scale réduit */
+  .grimoire-open {
+    width: 180%;
+    transform-origin: left center;
+  }
+  
+  .grimoire.open .grimoire-open {
+    transform: scale(0.95);
+  }
+  
   .page {
-    padding: 0.8rem;
+    width: 50%;
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
   
   .page-right h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   
   .page-right li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
   }
   
   .avatar-container img {
-    max-width: 120px;
+    max-width: 100px;
   }
 }
   
