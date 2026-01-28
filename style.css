@@ -156,6 +156,14 @@ body {
   }
 
 /* Media queries pour le grimoire */
+
+/* Desktop et Tablette grande : couverture visible toujours */
+@media (min-width: 769px) {
+  .grimoire.open .cover {
+    display: block !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .grimoire-container {
     margin: 1.5rem 1rem;
@@ -233,6 +241,11 @@ body {
   .grimoire-text {
     font-size: 0.9rem;
     bottom: 6px;
+  }
+  
+  /* UNIQUEMENT sur mobile : masquer la couverture */
+  .grimoire.open .cover {
+    display: none;
   }
   
   /* Utiliser transform au lieu de width pour ne pas dépasser */
