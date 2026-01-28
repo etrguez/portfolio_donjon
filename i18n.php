@@ -362,4 +362,13 @@ function t($key) {
   // Fallback sur la clé elle-même
   return $key;
 }
+
+// Fonction pour afficher un texte conditionnellement selon la langue
+function getText($fr, $es, $en) {
+  global $currentLang;
+  if ($currentLang === 'fr') return $fr;
+  if ($currentLang === 'es') return $es;
+  return $en;
+}
 ?>
+
