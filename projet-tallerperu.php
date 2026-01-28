@@ -105,6 +105,7 @@
             <div class="galerie-screenshots">
               <img src="assets/tallerperu/formulaire-ajout-1.png" alt="Interface d'ajout de promotion - Partie 1" class="screenshot">
               <img src="assets/tallerperu/formulaire-ajout-2.png" alt="Interface d'ajout de promotion - Partie 2" class="screenshot">
+              <img src="assets/tallerperu/formulaire-ajout-3.png" alt="Interface d'ajout de promotion - Partie 3" class="screenshot">
             </div>
           </div>
 
