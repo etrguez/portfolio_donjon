@@ -510,6 +510,10 @@ footer {
   resize: vertical;
 }
 
+#form-message {
+  display: none;
+}
+
 #bureau-chouettes button {
   background: linear-gradient(135deg, #7f9c56, #a3c86e);
   border: none;

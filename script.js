@@ -191,6 +191,8 @@ if (formChouette) {
       submitButton.style.cursor = "pointer";
       submitButton.textContent = originalText;
       
+      // Afficher le message
+      formMessage.style.display = "block";
       formMessage.innerHTML = data;
       
       // Vérifier si le message contient "success" ou "error"
