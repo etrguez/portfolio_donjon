@@ -60,8 +60,6 @@ if (!isset($GLOBALS['translations'])) {
     
     // Projects section
     'projects_title' => 'Quêtes',
-    'project_btn_details' => '📖 Voir les détails',
-    'project_btn_site' => '🌐 Voir le site',
     
     // Project cards
     'project_calculator' => 'Calculateur de Dépenses ✨',
@@ -168,8 +166,6 @@ if (!isset($GLOBALS['translations'])) {
     
     // Projects section
     'projects_title' => 'Misiones',
-    'project_btn_details' => '📖 Ver detalles',
-    'project_btn_site' => '🌐 Ver sitio',
     
     // Project cards
     'project_calculator' => 'Calculadora de Gastos ✨',
@@ -276,8 +272,6 @@ if (!isset($GLOBALS['translations'])) {
     
     // Projects section
     'projects_title' => 'Quests',
-    'project_btn_details' => '📖 View Details',
-    'project_btn_site' => '🌐 View Site',
     
     // Project cards
     'project_calculator' => 'Expense Calculator ✨',
