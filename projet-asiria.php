@@ -32,7 +32,6 @@
       
       <div class="projet-meta">
         <p><strong><?php echo t('tech_stack'); ?> :</strong> PHP 7/8, PDO, MySQL/MariaDB, HTML5, CSS3 (Tailwind), JavaScript</p>
-        <p><strong><?php echo trans('Développé par', 'Desarrollado por', 'Developed by'); ?> :</strong> KDevs (Babou CAMARA-DIABY & Elisabeth TALAVERA RODRIGUEZ)</p>
       </div>
 
       <h3><?php echo t('project_overview'); ?></h3>
