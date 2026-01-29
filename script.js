@@ -142,3 +142,47 @@ window.addEventListener("resize", () => {
     grimoireOpen.style.removeProperty("display");
   }
 });
+
+// ===== GESTION DU FORMULAIRE DE CONTACT =====
+const formChouette = document.getElementById("form-chouette");
+if (formChouette) {
+  formChouette.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    fetch('traitement.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+    })
+    .then(response => response.text())
+    .then(data => {
+      const formMessage = document.getElementById("form-message");
+      formMessage.innerHTML = data;
+      
+      // Vérifier si le message contient "success" ou "error"
+      if (data.includes("bien") || data.includes("correctamente") || data.includes("successfully")) {
+        formMessage.style.color = "#00ff00";
+        formChouette.reset();
+      } else {
+        formMessage.style.color = "#ff6b6b";
+      }
+      
+      formMessage.style.marginTop = "1rem";
+      formMessage.style.padding = "1rem";
+      formMessage.style.borderRadius = "5px";
+      formMessage.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    })
+    .catch(error => {
+      const formMessage = document.getElementById("form-message");
+      formMessage.innerHTML = "Une erreur est survenue.";
+      formMessage.style.color = "#ff6b6b";
+      console.error("Erreur :", error);
+    });
+  });
+}

@@ -14,11 +14,20 @@ if (file_exists($envFile)) {
     }
 }
 
+// Activer le mode debug pour voir les erreurs
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Récupérer et nettoyer les données du formulaire
     $name = htmlspecialchars(trim($_POST['name'] ?? ''));
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
     $message = htmlspecialchars(trim($_POST['message'] ?? ''));
 
     if (empty($name) || empty($_POST['email']) || empty($message)) {
@@ -31,47 +40,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Email destination (ton email)
-    $to = 'eli_tr@hotmail.es';
-    
-    // Headers
-    $headers = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: " . $email . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    
-    // Subject selon la langue
-    if ($currentLang === 'es') {
-        $subject = "Nuevo mensaje de contact de " . $name;
-        $body = "<h2>Nuevo mensaje de contact</h2>";
-        $body .= "<p><strong>Nombre:</strong> " . $name . "</p>";
-        $body .= "<p><strong>Email:</strong> " . $email . "</p>";
-        $body .= "<p><strong>Mensaje:</strong></p>";
-        $body .= "<p>" . nl2br($message) . "</p>";
-    } elseif ($currentLang === 'en') {
-        $subject = "New contact message from " . $name;
-        $body = "<h2>New contact message</h2>";
-        $body .= "<p><strong>Name:</strong> " . $name . "</p>";
-        $body .= "<p><strong>Email:</strong> " . $email . "</p>";
-        $body .= "<p><strong>Message:</strong></p>";
-        $body .= "<p>" . nl2br($message) . "</p>";
-    } else {
-        $subject = "Nouveau message de contact de " . $name;
-        $body = "<h2>Nouveau message de contact</h2>";
-        $body .= "<p><strong>Nom:</strong> " . $name . "</p>";
-        $body .= "<p><strong>Email:</strong> " . $email . "</p>";
-        $body .= "<p><strong>Message:</strong></p>";
-        $body .= "<p>" . nl2br($message) . "</p>";
-    }
-    
-    // Envoyer l'email
-    if (mail($to, $subject, $body, $headers)) {
+    // Configuration PHPMailer
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuration SMTP
+        $mail->isSMTP();
+        $mail->Host = $envVars['SMTP_HOST'] ?? 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = $envVars['SMTP_USERNAME'] ?? '';
+        $mail->Password = $envVars['SMTP_PASSWORD'] ?? '';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = $envVars['SMTP_PORT'] ?? 587;
+        $mail->CharSet = 'UTF-8';
+
+        // Destinataire
+        $mail->setFrom($envVars['SMTP_USERNAME'] ?? 'camara.enc@gmail.com', 'Portfolio Contact Form');
+        $mail->addAddress('eli_tr@hotmail.es', 'Elisabeth');
+        $mail->addReplyTo($email, $name);
+
+        // Contenu du mail
+        $mail->isHTML(true);
+        
+        if ($currentLang === 'es') {
+            $mail->Subject = "Nuevo mensaje de contacto de " . $name;
+            $mail->Body = "<h2>Nuevo mensaje de contacto</h2>";
+            $mail->Body .= "<p><strong>Nombre:</strong> " . $name . "</p>";
+            $mail->Body .= "<p><strong>Email:</strong> " . $email . "</p>";
+            $mail->Body .= "<p><strong>Mensaje:</strong></p>";
+            $mail->Body .= "<p>" . nl2br($message) . "</p>";
+        } elseif ($currentLang === 'en') {
+            $mail->Subject = "New contact message from " . $name;
+            $mail->Body = "<h2>New contact message</h2>";
+            $mail->Body .= "<p><strong>Name:</strong> " . $name . "</p>";
+            $mail->Body .= "<p><strong>Email:</strong> " . $email . "</p>";
+            $mail->Body .= "<p><strong>Message:</strong></p>";
+            $mail->Body .= "<p>" . nl2br($message) . "</p>";
+        } else {
+            $mail->Subject = "Nouveau message de contact de " . $name;
+            $mail->Body = "<h2>Nouveau message de contact</h2>";
+            $mail->Body .= "<p><strong>Nom:</strong> " . $name . "</p>";
+            $mail->Body .= "<p><strong>Email:</strong> " . $email . "</p>";
+            $mail->Body .= "<p><strong>Message:</strong></p>";
+            $mail->Body .= "<p>" . nl2br($message) . "</p>";
+        }
+
+        $mail->AltBody = strip_tags($mail->Body);
+
+        $mail->send();
         echo t('form_success');
-    } else {
-        echo t('form_error') . " mail() function failed";
+
+    } catch (Exception $e) {
+        error_log("Erreur PHPMailer: " . $mail->ErrorInfo);
+        echo t('form_error') . $mail->ErrorInfo;
     }
 }
-?>
 
-?>
 
