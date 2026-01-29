@@ -116,7 +116,7 @@
       </ul>
 
       <div class="projet-cta">
-        <a href="https://scout-doramas.kdevs.io/" class="btn-principal" target="_blank"><?php echo t('view_site'); ?></a>
+        <a href="https://scout-doramas.kdevs.io/" class="btn-principal" target="_blank"><?php echo t('project_view_live'); ?></a>
       </div>
     </div>
   </div>
