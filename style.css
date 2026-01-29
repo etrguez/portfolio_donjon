@@ -1108,9 +1108,12 @@ footer {
   }
 
   .btn-principal {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
