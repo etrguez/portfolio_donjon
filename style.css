@@ -736,6 +736,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .projet-card {
+    padding: 1rem;
+  }
+
   .actions-projet {
     gap: 0.6rem;
   }
@@ -750,16 +754,21 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .projet-card {
+    padding: 0.8rem;
+    margin: 1rem 0;
+  }
+
   .actions-projet {
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .btn-detail,
   .btn-site {
     width: 100%;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.75rem;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
