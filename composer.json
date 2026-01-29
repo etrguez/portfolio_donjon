@@ -1,0 +1,7 @@
+{
+    "name": "portfolio/donjon",
+    "description": "Elisabeth - Portfolio Donjon Developer",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    }
+}
