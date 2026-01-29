@@ -89,6 +89,12 @@ if (!isset($GLOBALS['translations'])) {
     'contact_message' => 'Votre message enchanté...',
     'contact_submit' => 'Envoyer',
     
+    // Form messages
+    'form_required_fields' => 'Veuillez remplir tous les champs obligatoires.',
+    'form_invalid_email' => 'Veuillez fournir une adresse e-mail valide.',
+    'form_success' => 'Votre message a bien été envoyé. Merci !',
+    'form_error' => 'Votre message n\'a pas pu être envoyé. Erreur : ',
+    
     // Footer
     'footer_copyright' => '© 2025 Elisabeth - Portfolio Donjon Développeuse',
     'footer_linkedin' => 'LinkedIn',
@@ -195,6 +201,12 @@ if (!isset($GLOBALS['translations'])) {
     'contact_message' => 'Tu mensaje encantado...',
     'contact_submit' => 'Enviar',
     
+    // Form messages
+    'form_required_fields' => 'Por favor, rellena todos los campos obligatorios.',
+    'form_invalid_email' => 'Por favor, proporciona una dirección de correo electrónico válida.',
+    'form_success' => 'Tu mensaje se ha enviado correctamente. ¡Gracias!',
+    'form_error' => 'Tu mensaje no se pudo enviar. Error: ',
+    
     // Footer
     'footer_copyright' => '© 2025 Elisabeth - Portafolio Maga Desarrolladora',
     'footer_linkedin' => 'LinkedIn',
@@ -299,8 +311,12 @@ if (!isset($GLOBALS['translations'])) {
     'contact_name' => 'Your name',
     'contact_email' => 'Your email',
     'contact_message' => 'Your enchanted message...',
-    'contact_submit' => 'Send',
-    
+    'contact_submit' => 'Send',    
+    // Form messages
+    'form_required_fields' => 'Please fill in all required fields.',
+    'form_invalid_email' => 'Please provide a valid email address.',
+    'form_success' => 'Your message has been sent successfully. Thank you!',
+    'form_error' => 'Your message could not be sent. Error: ',    
     // Footer
     'footer_copyright' => '© 2025 Elisabeth - Developer Mage Portfolio',
     'footer_linkedin' => 'LinkedIn',

@@ -152,6 +152,7 @@
     <textarea id="message" name="message" placeholder="<?php echo t('contact_message'); ?>" rows="5" required></textarea>
     <button type="submit"><?php echo t('contact_submit'); ?></button>
   </form>
+  <div id="form-message"></div>
   </section>
 
   <footer>
