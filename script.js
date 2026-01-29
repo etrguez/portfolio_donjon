@@ -152,6 +152,28 @@ if (formChouette) {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
+    
+    const formMessage = document.getElementById("form-message");
+    const submitButton = formChouette.querySelector('button[type="submit"]');
+    
+    // Afficher l'animation de chargement
+    submitButton.disabled = true;
+    submitButton.style.opacity = "0.6";
+    submitButton.style.cursor = "not-allowed";
+    
+    const originalText = submitButton.textContent;
+    submitButton.innerHTML = '🦉 <span class="loading-dots">Envoi en cours</span>';
+    
+    // Animation des points
+    let dotCount = 0;
+    const loadingInterval = setInterval(() => {
+      dotCount = (dotCount + 1) % 4;
+      const dots = '.'.repeat(dotCount);
+      const loadingSpan = submitButton.querySelector('.loading-dots');
+      if (loadingSpan) {
+        loadingSpan.textContent = 'Envoi en cours' + dots;
+      }
+    }, 400);
 
     fetch('traitement.php', {
       method: 'POST',
@@ -162,26 +184,55 @@ if (formChouette) {
     })
     .then(response => response.text())
     .then(data => {
-      const formMessage = document.getElementById("form-message");
+      // Arrêter l'animation
+      clearInterval(loadingInterval);
+      submitButton.disabled = false;
+      submitButton.style.opacity = "1";
+      submitButton.style.cursor = "pointer";
+      submitButton.textContent = originalText;
+      
       formMessage.innerHTML = data;
       
       // Vérifier si le message contient "success" ou "error"
       if (data.includes("bien") || data.includes("correctamente") || data.includes("successfully")) {
         formMessage.style.color = "#00ff00";
+        formMessage.style.background = "linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 100, 0.2))";
+        formMessage.style.border = "2px solid #00ff00";
         formChouette.reset();
+        
+        // Animation de succès
+        formMessage.style.animation = "slideInUp 0.5s ease";
       } else {
         formMessage.style.color = "#ff6b6b";
+        formMessage.style.background = "linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 50, 50, 0.2))";
+        formMessage.style.border = "2px solid #ff6b6b";
+        
+        // Animation d'erreur
+        formMessage.style.animation = "shake 0.5s ease";
       }
       
       formMessage.style.marginTop = "1rem";
       formMessage.style.padding = "1rem";
-      formMessage.style.borderRadius = "5px";
-      formMessage.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+      formMessage.style.borderRadius = "8px";
+      formMessage.style.fontWeight = "bold";
+      formMessage.style.textAlign = "center";
     })
     .catch(error => {
-      const formMessage = document.getElementById("form-message");
+      clearInterval(loadingInterval);
+      submitButton.disabled = false;
+      submitButton.style.opacity = "1";
+      submitButton.style.cursor = "pointer";
+      submitButton.textContent = originalText;
+      
       formMessage.innerHTML = "Une erreur est survenue.";
       formMessage.style.color = "#ff6b6b";
+      formMessage.style.background = "linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 50, 50, 0.2))";
+      formMessage.style.border = "2px solid #ff6b6b";
+      formMessage.style.marginTop = "1rem";
+      formMessage.style.padding = "1rem";
+      formMessage.style.borderRadius = "8px";
+      formMessage.style.fontWeight = "bold";
+      formMessage.style.textAlign = "center";
       console.error("Erreur :", error);
     });
   });
