@@ -2,6 +2,12 @@
 // Système de traduction i18n pour le portfolio
 // Langues supportées: FR (français), ES (español), EN (english)
 
+// Headers de sécurité pour toutes les pages
+header("X-Content-Type-Options: nosniff");
+header("X-Frame-Options: SAMEORIGIN");
+header("X-XSS-Protection: 1; mode=block");
+header("Referrer-Policy: strict-origin-when-cross-origin");
+
 // Éviter les redéclarations si le fichier est inclus plusieurs fois
 if (!function_exists('getLanguage')) {
 

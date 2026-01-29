@@ -193,7 +193,7 @@ if (formChouette) {
       
       // Afficher le message
       formMessage.style.display = "block";
-      formMessage.innerHTML = data;
+      formMessage.textContent = data;
       
       // Vérifier si le message contient "success" ou "error"
       if (data.includes("bien") || data.includes("correctamente") || data.includes("successfully")) {
@@ -226,7 +226,7 @@ if (formChouette) {
       submitButton.style.cursor = "pointer";
       submitButton.textContent = originalText;
       
-      formMessage.innerHTML = "Une erreur est survenue.";
+      formMessage.textContent = "Une erreur est survenue.";
       formMessage.style.color = "#ff6b6b";
       formMessage.style.background = "linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 50, 50, 0.2))";
       formMessage.style.border = "2px solid #ff6b6b";
