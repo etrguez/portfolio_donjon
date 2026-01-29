@@ -124,9 +124,11 @@ if (!isset($GLOBALS['translations'])) {
     'feature_security' => '🔐 Sécurité :',
     'feature_validation' => '✅ Validation :',
     
+    // Project buttons
+    'project_btn_details' => '📖 Voir les détails',
+    'project_btn_site' => '🌐 Voir le site',
+    
     // Common buttons
-    'btn_view_details' => 'Voir les détails',
-    'btn_view_site' => 'Voir le site',
     'btn_send' => 'Envoyer',
     'btn_back' => 'Retour',
     
@@ -230,9 +232,11 @@ if (!isset($GLOBALS['translations'])) {
     'feature_security' => '🔐 Seguridad:',
     'feature_validation' => '✅ Validación:',
     
+    // Project buttons
+    'project_btn_details' => '📖 Ver detalles',
+    'project_btn_site' => '🌐 Ver sitio',
+    
     // Common buttons
-    'btn_view_details' => 'Ver detalles',
-    'btn_view_site' => 'Ver sitio',
     'btn_send' => 'Enviar',
     'btn_back' => 'Atrás',
     
@@ -336,9 +340,11 @@ if (!isset($GLOBALS['translations'])) {
     'feature_security' => '🔐 Security:',
     'feature_validation' => '✅ Validation:',
     
+    // Project buttons
+    'project_btn_details' => '📖 View Details',
+    'project_btn_site' => '🌐 View Site',
+    
     // Common buttons
-    'btn_view_details' => 'View Details',
-    'btn_view_site' => 'View Site',
     'btn_send' => 'Send',
     'btn_back' => 'Back',
     
