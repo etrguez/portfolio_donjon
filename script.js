@@ -239,3 +239,105 @@ if (formChouette) {
     });
   });
 }
+// ===== LIGHTBOX POUR LES IMAGES =====
+function initLightbox() {
+  // Créer la modale lightbox
+  const lightboxHTML = `
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close">✕</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Image agrandie">
+        <div class="lightbox-nav">
+          <button class="lightbox-prev">❮</button>
+          <button class="lightbox-next">❯</button>
+        </div>
+        <div class="lightbox-counter">
+          <span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML("beforeend", lightboxHTML);
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
+  const prevBtn = document.querySelector(".lightbox-prev");
+  const nextBtn = document.querySelector(".lightbox-next");
+  const currentSpan = document.getElementById("lightbox-current");
+  const totalSpan = document.getElementById("lightbox-total");
+
+  let allImages = [];
+  let currentIndex = 0;
+
+  // Récupérer toutes les images screenshot
+  function updateImages() {
+    allImages = Array.from(document.querySelectorAll(".screenshot"));
+    totalSpan.textContent = allImages.length;
+  }
+
+  // Ouvrir la lightbox
+  function openLightbox(index) {
+    updateImages();
+    if (allImages.length === 0) return;
+
+    currentIndex = index;
+    lightboxImg.src = allImages[currentIndex].src;
+    lightbox.classList.add("active");
+    currentSpan.textContent = currentIndex + 1;
+  }
+
+  // Fermer la lightbox
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+  }
+
+  // Navigation
+  function showNext() {
+    currentIndex = (currentIndex + 1) % allImages.length;
+    lightboxImg.src = allImages[currentIndex].src;
+    currentSpan.textContent = currentIndex + 1;
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+    lightboxImg.src = allImages[currentIndex].src;
+    currentSpan.textContent = currentIndex + 1;
+  }
+
+  // Event listeners
+  closeBtn.addEventListener("click", closeLightbox);
+  nextBtn.addEventListener("click", showNext);
+  prevBtn.addEventListener("click", showPrev);
+
+  // Fermer au clic en dehors de l'image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Fermer avec Échap
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("active")) {
+      closeLightbox();
+    }
+    if (lightbox.classList.contains("active")) {
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+    }
+  });
+
+  // Au clic sur une image
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("screenshot")) {
+      updateImages();
+      const index = allImages.indexOf(e.target);
+      openLightbox(index);
+    }
+  });
+}
+
+// Initialiser la lightbox au chargement
+document.addEventListener("DOMContentLoaded", initLightbox);
