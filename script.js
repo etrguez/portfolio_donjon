@@ -239,6 +239,7 @@ if (formChouette) {
     });
   });
 }
+
 // ===== LIGHTBOX POUR LES IMAGES =====
 function initLightbox() {
   // Créer la modale lightbox
@@ -275,17 +276,22 @@ function initLightbox() {
   function updateImages() {
     allImages = Array.from(document.querySelectorAll(".screenshot"));
     totalSpan.textContent = allImages.length;
+    console.log("Images trouvées:", allImages.length);
   }
 
   // Ouvrir la lightbox
   function openLightbox(index) {
     updateImages();
-    if (allImages.length === 0) return;
+    if (allImages.length === 0) {
+      console.warn("Pas d'images trouvées");
+      return;
+    }
 
-    currentIndex = index;
+    currentIndex = Math.max(0, Math.min(index, allImages.length - 1));
     lightboxImg.src = allImages[currentIndex].src;
     lightbox.classList.add("active");
     currentSpan.textContent = currentIndex + 1;
+    console.log("Lightbox ouverte, image:", currentIndex + 1);
   }
 
   // Fermer la lightbox
@@ -332,11 +338,16 @@ function initLightbox() {
   // Au clic sur une image
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("screenshot")) {
+      console.log("Image cliquée:", e.target.src);
       updateImages();
       const index = allImages.indexOf(e.target);
       openLightbox(index);
     }
   });
+
+  // Initialisation
+  updateImages();
+  console.log("Lightbox initialisée avec", allImages.length, "images");
 }
 
 // Initialiser la lightbox au chargement
