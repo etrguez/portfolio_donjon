@@ -132,5 +132,23 @@
   </footer>
 
   <script src="script.js"></script>
-</body>
+  <script>
+    // Test de la lightbox
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("=== DIAGNOSTIC LIGHTBOX ===");
+      console.log("Screenshots trouvées:", document.querySelectorAll(".screenshot").length);
+      console.log("Lightbox existe:", document.getElementById("lightbox") !== null);
+      
+      const images = document.querySelectorAll(".screenshot");
+      console.log("Images:", images);
+      
+      images.forEach((img, idx) => {
+        console.log(`Image ${idx + 1}:`, img.src, img.className);
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function(e) {
+          console.log("IMAGE CLIQUÉE:", e.target.src);
+        });
+      });
+    });
+  </script></body>
 </html>

@@ -1270,15 +1270,16 @@ footer p {
   top: -40px;
   right: 0;
   font-size: 2.5rem;
-  color: white;
+  color: #ff4444;
   cursor: pointer;
   background: none;
   border: none;
-  transition: transform 0.2s;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .lightbox-close:hover {
   transform: scale(1.2);
+  color: #ff0000;
 }
 
 .lightbox-nav {
