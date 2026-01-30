@@ -44,12 +44,21 @@
       </p>
 
       <div class="galerie-screenshots">
-        <img src="assets/asiriaalvarez/site-public.png" alt="Site public Asiria Álvarez" class="screenshot">
-        <img src="assets/asiriaalvarez/admin-dashboard.png" alt="Dashboard administrateur" class="screenshot">
-        <img src="assets/asiriaalvarez/admin-galerie.png" alt="Gestion galerie" class="screenshot">
-        <img src="assets/asiriaalvarez/admin-stats.png" alt="Statistiques et analytics" class="screenshot">
-        <img src="assets/asiriaalvarez/admin-projets.png" alt="Gestion projets" class="screenshot">
-        <img src="assets/asiriaalvarez/admin-form.png" alt="Formulaire édition" class="screenshot">
+        <?php
+          $screens = glob('assets/asiriaalvarez/*.{png,jpg,jpeg,webp}', GLOB_BRACE);
+          usort($screens, function($a, $b) {
+            $numA = intval(preg_replace('/\D/', '', basename($a)));
+            $numB = intval(preg_replace('/\D/', '', basename($b)));
+            return $numA - $numB;
+          });
+          $screens = array_slice($screens, 0, 10);
+          foreach ($screens as $index => $screen) {
+            $fileName = basename($screen);
+            $src = 'assets/asiriaalvarez/' . rawurlencode($fileName);
+            $alt = 'Screenshot ' . ($index + 1) . ' - Asiria Álvarez';
+            echo '<img src="' . $src . '" alt="' . $alt . '" class="screenshot">';
+          }
+        ?>
       </div>
 
       <h3><?php echo t('project_public_features'); ?></h3>

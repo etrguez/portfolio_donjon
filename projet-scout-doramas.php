@@ -42,12 +42,21 @@
       </p>
 
       <div class="galerie-screenshots">
-        <img src="assets/scout_doramas/site-public.png" alt="Site public Scout Doramas" class="screenshot">
-        <img src="assets/scout_doramas/admin-dashboard.png" alt="Dashboard administrateur" class="screenshot">
-        <img src="assets/scout_doramas/admin-sections.png" alt="Gestion sections" class="screenshot">
-        <img src="assets/scout_doramas/admin-inscriptions.png" alt="Gestion inscriptions" class="screenshot">
-        <img src="assets/scout_doramas/admin-galerie.png" alt="Gestion galerie" class="screenshot">
-        <img src="assets/scout_doramas/admin-messages.png" alt="Gestion messages" class="screenshot">
+        <?php
+          $screens = glob('assets/scout_doramas/*.{png,jpg,jpeg,webp}', GLOB_BRACE);
+          usort($screens, function($a, $b) {
+            $numA = intval(preg_replace('/\D/', '', basename($a)));
+            $numB = intval(preg_replace('/\D/', '', basename($b)));
+            return $numA - $numB;
+          });
+          $screens = array_slice($screens, 0, 10);
+          foreach ($screens as $index => $screen) {
+            $fileName = basename($screen);
+            $src = 'assets/scout_doramas/' . rawurlencode($fileName);
+            $alt = 'Screenshot ' . ($index + 1) . ' - Scout-Doramas 104';
+            echo '<img src="' . $src . '" alt="' . $alt . '" class="screenshot">';
+          }
+        ?>
       </div>
 
       <h3><?php echo trans('Espace Public', 'Espacio Público', 'Public Space'); ?></h3>

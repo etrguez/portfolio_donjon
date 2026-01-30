@@ -81,7 +81,7 @@ if (!isset($GLOBALS['translations'])) {
     'project_asiria_stack' => 'PHP 7/8, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript',
     
     'project_taller' => 'Taller Perú ✨',
-    'project_taller_desc' => 'Site professionnel pour un atelier automobile au Pérou avec gestion dynamique des promotions. Interface client intuitive et puissant panel administrateur pour gérer les offres en temps réel avec optimisation d\'images avancée.',
+    'project_taller_desc' => 'Site professionnel pour un garage automobile à Las Palmas avec gestion dynamique des promotions. Interface client intuitive et puissant panel administrateur pour gérer les offres en temps réel avec optimisation d\'images avancée.',
     'project_taller_stack' => 'PHP, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript',
     
     'project_scout' => 'Scout-Doramas 104 ✨',
@@ -193,7 +193,7 @@ if (!isset($GLOBALS['translations'])) {
     'project_asiria_stack' => 'PHP 7/8, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript',
     
     'project_taller' => 'Taller Perú ✨',
-    'project_taller_desc' => 'Sitio profesional para un taller automotriz en Perú con gestión dinámica de promociones. Interfaz cliente intuitiva y potente panel administrativo para gestionar ofertas en tiempo real con optimización avanzada de imágenes.',
+    'project_taller_desc' => 'Sitio profesional para un garage automotriz en Las Palmas con gestión dinámica de promociones. Interfaz cliente intuitiva y potente panel administrativo para gestionar ofertas en tiempo real con optimización avanzada de imágenes.',
     'project_taller_stack' => 'PHP, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript',
     
     'project_scout' => 'Scout-Doramas 104 ✨',
@@ -305,7 +305,7 @@ if (!isset($GLOBALS['translations'])) {
     'project_asiria_stack' => 'PHP 7/8, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript',
     
     'project_taller' => 'Taller Perú ✨',
-    'project_taller_desc' => 'Professional website for an automotive workshop in Peru with dynamic promotion management. Intuitive client interface and powerful admin panel to manage offers in real time with advanced image optimization.',
+    'project_taller_desc' => 'Professional website for an automotive garage in Las Palmas with dynamic promotion management. Intuitive client interface and powerful admin panel to manage offers in real time with advanced image optimization.',
     'project_taller_stack' => 'PHP, PDO, MySQL, HTML5, CSS3 (Tailwind), JavaScript',
     
     'project_scout' => 'Scout-Doramas 104 ✨',
