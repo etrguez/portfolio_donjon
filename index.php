@@ -89,7 +89,7 @@
     <p class="stack-info"><strong><?php echo t('tech_stack'); ?> :</strong> <?php echo t('project_calculator_stack'); ?></p>
     <div class="actions-projet">
       <a href="projet-calculateur.php" class="btn-detail"><?php echo t('project_btn_details'); ?></a>
-      <a href="http://calculateur0101.caba3973.odns.fr/" class="btn-site"><?php echo t('project_btn_site'); ?></a>
+      <a href="https://calculateur.elisadev.com/" class="btn-site"><?php echo t('project_btn_site'); ?></a>
     </div>
   </div>
 
@@ -101,7 +101,7 @@
     <p class="stack-info"><strong><?php echo t('tech_stack'); ?> :</strong> <?php echo t('project_zoo_stack'); ?></p>
     <div class="actions-projet">
       <a href="projet-zoo-arcadia.php" class="btn-detail"><?php echo t('project_btn_details'); ?></a>
-      <a href="http://arcadia0101.caba3973.odns.fr" class="btn-site"><?php echo t('project_btn_site'); ?></a>
+      <a href="https://arcadia.elisadev.com/" class="btn-site"><?php echo t('project_btn_site'); ?></a>
     </div>
   </div>
 

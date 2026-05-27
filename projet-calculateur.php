@@ -93,7 +93,7 @@
       </p>
 
       <div class="projet-cta">
-        <a href="http://calculateur0101.caba3973.odns.fr/" class="btn-principal"><?php echo t('project_view_live'); ?></a>
+        <a href="https://calculateur.elisadev.com/" class="btn-principal"><?php echo t('project_view_live'); ?></a>
       </div>
     </div>
   </div>

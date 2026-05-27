@@ -162,7 +162,7 @@
       </p>
 
       <div class="projet-cta">
-        <a href="http://arcadia0101.caba3973.odns.fr" class="btn-principal"><?php echo t('project_view_live'); ?></a>
+        <a href="https://arcadia.elisadev.com/" class="btn-principal"><?php echo t('project_view_live'); ?></a>
       </div>
     </div>
   </div>
